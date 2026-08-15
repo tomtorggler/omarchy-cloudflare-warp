@@ -1,29 +1,27 @@
-# [Plugin]: Cloudflare WARP
+### Repository URL
 
-This is an independent, unofficial Omarchy plugin for the Cloudflare® WARP® client. It is unaffiliated with and not endorsed, sponsored, or supported by Cloudflare, Inc. or Omarchy.
+https://github.com/rpots/omarchy-cloudflare-warp
 
-Cloudflare® and WARP® are trademarks and/or registered trademarks of Cloudflare, Inc. in the United States and other jurisdictions.
+### Category
 
-- Repository: `https://github.com/rpots/omarchy-cloudflare-warp`
-- Category: Widgets
-- Tags: `Bar`, `Quickshell`, `Security`
-- Plugin ID: `io.github.rui-pedro-silva.cloudflare-warp`
-- License: MIT
+Widgets
 
-It provides status and consumer-safe connection/DNS controls in a theme-native, keyboard-driven Omarchy bar panel. The plugin executes fixed argument arrays, never reads or writes WARP state files directly, bounds subprocesses, and exposes only allowlisted categorical IPC values. Terms acceptance is explicitly confirmed; only that consent persists as a native non-secret boolean so Linux 2026.6’s invocation-scoped `--accept-tos` requirement can be applied consistently. A strict JSON `mdm get-configs` check permits registration only when no active or available MDM configuration exists, and an existing registration is adopted without deletion. Starting a stopped daemon is separately confirmed and invokes only `pkexec systemctl enable --now warp-svc.service`; this privilege and service-management capability requires marketplace review.
+### Tags
 
-Pre-submission checklist:
+Bar, Quickshell, Security
 
-- [ ] Public repository created and release tag `v1.0.0` published
-- [ ] `omarchy plugin validate .` passes
-- [ ] Node test and contract CI passes
-- [ ] Live-shell smoke checklist passes
-- [ ] Real consumer fixtures captured for Families Off, Malware, and Full
-- [ ] Security baseline reviewed
-- [ ] `preview.png` contains fabricated data only
-- [ ] Repository documents installation, removal, dependencies, and license
-- [ ] Submitter owns or has permission to publish the plugin and preview
-- [ ] Plugin does not overwrite user configuration without explicit consent
-- [ ] Listing approval is understood not to be a security certification
+### Suggest a missing tag
 
-Prepared only; do not submit without explicit authorization.
+_No response_
+
+### Maintainer notes
+
+This is an independent, unofficial Omarchy plugin for the locally installed Cloudflare WARP client. It requires the community-maintained `cloudflare-warp-bin` AUR package; Cloudflare does not officially support Arch Linux. The plugin uses fixed `warp-cli` argument arrays, never edits WARP state files, and exposes only normalized IPC values. Starting a stopped daemon is separately confirmed and invokes only `pkexec systemctl enable --now warp-svc.service`. Consumer registration requires explicit Terms acceptance and a strict MDM preflight; managed configuration remains read-only. The root `preview.png` is a clean fabricated connected-state capture with no identifiers or proprietary logo asset.
+
+### Submission checklist
+
+- [ ] The repository is public and contains installation and removal instructions.
+- [ ] I have documented the plugin license and any external dependencies.
+- [ ] I confirm that I own or have permission to submit this plugin and its preview assets.
+- [ ] The plugin does not overwrite user configuration without explicit consent.
+- [ ] I understand that approval is for listing and is not a security review.
