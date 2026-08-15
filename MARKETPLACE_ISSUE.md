@@ -4,7 +4,7 @@ This is an independent, unofficial Omarchy plugin for the Cloudflare® WARP® cl
 
 Cloudflare® and WARP® are trademarks and/or registered trademarks of Cloudflare, Inc. in the United States and other jurisdictions.
 
-- Repository: `https://github.com/rui-pedro-silva/omarchy-cloudflare-warp`
+- Repository: `https://github.com/rpots/omarchy-cloudflare-warp`
 - Category: Widgets
 - Tags: `Bar`, `Quickshell`, `Security`
 - Plugin ID: `io.github.rui-pedro-silva.cloudflare-warp`

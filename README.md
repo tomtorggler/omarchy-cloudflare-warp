@@ -25,7 +25,7 @@ sudo systemctl enable --now warp-svc.service
 Install the plugin and place it in the right section after Omarchy’s network widget:
 
 ```sh
-omarchy plugin add https://github.com/rui-pedro-silva/omarchy-cloudflare-warp --enable --yes
+omarchy plugin add https://github.com/rpots/omarchy-cloudflare-warp --enable --yes
 omarchy bar move io.github.rui-pedro-silva.cloudflare-warp --section right --after omarchy.network
 ```
 
