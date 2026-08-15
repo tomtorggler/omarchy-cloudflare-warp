@@ -1,0 +1,22 @@
+# Release smoke checklist
+
+- [ ] Install with `omarchy plugin add <repo> --enable --yes`.
+- [ ] Move after `omarchy.network` in the right bar section.
+- [ ] Confirm the missing-client screen clearly identifies `cloudflare-warp-bin` as required and recommends the community-maintained AUR package without copying or running an install command.
+- [ ] Confirm left/right/middle mouse actions.
+- [ ] Confirm daemon startup requires in-panel confirmation followed by Polkit authentication, and cancel leaves the service unchanged.
+- [ ] Confirm the exact pre-Terms CLI response becomes an in-panel registration action rather than a raw red error or terminal instruction.
+- [ ] Confirm registration acceptance runs the strict JSON MDM preflight before `registration new`, and active, available, malformed, extra-field, or nonzero output blocks the mutation.
+- [ ] Confirm explicit consent persists only the native `termsAccepted` boolean and every later non-interactive WARP read/action includes one global `--accept-tos` flag, including after a clean shell restart.
+- [ ] Confirm an exact existing-registration response performs an accepted read-only refresh and adopts the registration without invoking or recommending deletion.
+- [ ] Confirm keyboard focus, arrows, j/k, Enter/Space, t, r, Escape, and Tab switching.
+- [ ] Confirm every dropdown restores the real value after both successful and failed commands.
+- [ ] Confirm Local proxy is unavailable with WireGuard and selecting Local proxy never changes the proxy port.
+- [ ] Confirm the live 2026.6 Families contract: the observed default `Resolve via: cloudflare-dns.com` is Off; Malware resolves through `security.cloudflare-dns.com`; Malware + adult content resolves through `family.cloudflare-dns.com`; `one.one.one.one` also means Off; custom or unknown resolvers remain Unknown and disable configuration.
+- [ ] Confirm an active or available MDM configuration makes registration and configuration fail closed.
+- [ ] Confirm Switch Locked blocks disconnect but does not masquerade as a generic configuration lock.
+- [ ] Confirm connect/disconnect remain busy through Connecting/Disconnecting and finish only on the exact real state.
+- [ ] Exercise a no-network or tunnel failure and confirm IPC contains no hostname, URL, token, or identifier.
+- [ ] Exercise `open`, `close`, `refresh`, `connect`, `disconnect`, `toggleWarp`, and secret-free `status` IPC.
+- [ ] Reload/rescan, disable/enable, and restart shell.
+- [ ] Remove the plugin and confirm WARP installation/state remains untouched.

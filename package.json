@@ -1,0 +1,8 @@
+{
+  "name": "omarchy-cloudflare-warp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "test": "node --test", "validate": "node scripts/validate-contract.mjs" },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}
