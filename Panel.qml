@@ -36,7 +36,11 @@ Panel {
   readonly property color barIconBackground: {
     if (!root.bar) return Color.bar.background
     if (!root.bar.transparent) return root.bar.background
-    return Qt.colorEqual(root.barForeground, root.bar.foreground) ? Color.background : root.bar.foreground
+    var fg = root.barForeground
+    var a = root.bar.foreground
+    var b = Color.background
+    function luma(c) { return 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b }
+    return Math.abs(luma(a) - luma(fg)) >= Math.abs(luma(b) - luma(fg)) ? a : b
   }
   readonly property bool termsAcceptanceRequired: warp.termsRequired
   readonly property bool registrationRequired: warp.state === "unregistered" || warp.termsRequired
