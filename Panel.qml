@@ -33,10 +33,11 @@ Panel {
   readonly property color barIconForeground: root.barForeground
   readonly property color barIconDim: Util.alpha(barIconForeground, 0.55)
   readonly property color barIconStateColor: iconStatus === "connected" || iconStatus === "connecting" ? barIconForeground : barIconDim
-  readonly property color barIconBackground: root.bar && root.bar.transparent
-    && !Qt.colorEqual(root.barForeground, root.bar.themeForeground)
-    ? root.bar.themeForeground
-    : (root.bar ? root.bar.background : Color.bar.background)
+  readonly property color barIconBackground: {
+    if (!root.bar) return Color.bar.background
+    if (!root.bar.transparent) return root.bar.background
+    return Qt.colorEqual(root.barForeground, root.bar.foreground) ? Color.background : root.bar.foreground
+  }
   readonly property bool termsAcceptanceRequired: warp.termsRequired
   readonly property bool registrationRequired: warp.state === "unregistered" || warp.termsRequired
 
